@@ -37,15 +37,19 @@
             findxy('out', e)
         }, false);
         canvas.addEventListener("touchmove", function (e) {
+            e.preventDefault();
             findxy('move', e)
         }, false);
         canvas.addEventListener("touchstart", function (e) {
+            e.preventDefault();
             findxy('down', e)
         }, false);
         canvas.addEventListener("touchend", function (e) {
+            e.preventDefault();
             findxy('up', e)
         }, false);
         canvas.addEventListener("touchcancel", function (e) {
+            e.preventDefault();
             findxy('out', e)
         }, false);
 
