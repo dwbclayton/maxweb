@@ -19,6 +19,9 @@
         canvas.addEventListener("mousemove", function (e) {
             findxy('move', e)
         }, false);
+        canvas.addEventListener("touchmove", function (e) {
+            findxy('move', e)
+        }, false);
         canvas.addEventListener("mousedown", function (e) {
             findxy('down', e)
         }, false);
