@@ -1,4 +1,12 @@
 <html>
+    <head>
+        <style>
+            body, html {
+                height: 100%;
+                overflow: hidden;
+            }
+        </style>
+    </head>
     <script type="text/javascript">
     var canvas, ctx, flag = false,
         prevX = 0,
@@ -102,9 +110,12 @@
         if (res == 'down') {
             prevX = currX;
             prevY = currY;
-            currX = e.clientX - canvas.offsetLeft;
-            currY = e.clientY - canvas.offsetTop;
-    
+            // currX = e.clientX - canvas.offsetLeft;
+            // currY = e.clientY - canvas.offsetTop;
+            currX = e.pageX - canvas.offsetLeft;
+            currY = e.pageY - canvas.offsetTop;
+
+
             flag = true;
             dot_flag = true;
             if (dot_flag) {
