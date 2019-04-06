@@ -137,8 +137,10 @@
             if (flag) {
                 prevX = currX;
                 prevY = currY;
-                currX = e.clientX - canvas.offsetLeft;
-                currY = e.clientY - canvas.offsetTop;
+                // currX = e.clientX - canvas.offsetLeft;
+                // currY = e.clientY - canvas.offsetTop;
+                currX = e.pageX - canvas.offsetLeft;
+                currY = e.pageY - canvas.offsetTop
                 draw();
             }
         }
